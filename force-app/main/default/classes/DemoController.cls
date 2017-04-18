@@ -12,7 +12,7 @@ public with sharing class DemoController {
         String lastName = ApexPages.currentPage().getParameters().get('lastName');
 
         if (lastName != null) {
-            // Query the object
+            // Query the object testing
             Contact theContact = [SELECT ID FROM Contact WHERE LastName = :lastName LIMIT 1];
 
             // this will set the Id, so now you can use the standard controller and just reference fields on the page
