@@ -9,7 +9,7 @@ public with sharing class DemoController {
      */
     public DemoController(ApexPages.StandardController controller) {
         // Get the last name from the url
-        String lastName = ApexPages.currentPage().getParameters().get('lastName');
+        String lastName = ApexPages.currentPage().getParameters().get('firstName');
 
         if (lastName != null) {
             // Query the object testing to my org
