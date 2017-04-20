@@ -7,13 +7,16 @@ public with sharing class DemoController {
     /**
      * Set the contact for the page using the lastName parameter, if there is one
      */
+
     Test from AnujBranch
+
+
     public DemoController(ApexPages.StandardController controller) {
         // Get the last name from the url
-        String lastName = ApexPages.currentPage().getParameters().get('lastName');
+        String lastName = ApexPages.currentPage().getParameters().get('firstName');
 
         if (lastName != null) {
-            // Query the object testing
+            // Query the object testing to my org
             Contact theContact = [SELECT ID FROM Contact WHERE LastName = :lastName LIMIT 1];
 
             // this will set the Id, so now you can use the standard controller and just reference fields on the page
